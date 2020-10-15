@@ -53,3 +53,17 @@ In the example above, Link is a component, to is an attribute being passed to th
 Using this concept, we can create a layout component which takes children as the content of each page and it renders the child elements where specified in the layout.
 
 To make props easier to read and understand what we're passing down to components, we can "destructure" them -> this effectively allows us to assign variables to elements of props so we can drop the props. syntax. 
+
+## Lesson 4
+* Introduction to Sass/SCSS
+* Gatsby Plugins installation and configuration
+* Global styling for our site
+
+We can use ordinary CSS, but I find SCSS a lot more friendly to use. This isn't a course about SCSS or CSS for that matter, but we need a basic understanding of it before we are able to style and layout our site.
+CSS sits on top of the HTML pages and defines the design for each element on the page like the font, the colour, the background etc. SCSS requires compilation that happens as part of the build process of your gatsby site, 
+and it compiles down to CSS anyway, so en effect they achieve the same ends, we're just better able to use other things which aren't present in CSS like variables and logical operations.
+
+1. Install gatsby-plugin-sass https://www.gatsbyjs.com/plugins/gatsby-plugin-sass
+2. Add gatsby-plugin-sass to gatsby-config.js
+
+Create a Layout.scss which we'll use to define global styles for the entire site.
