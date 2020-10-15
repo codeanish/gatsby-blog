@@ -51,3 +51,5 @@ Props consist of any JSX attributes passed down to the function as well as any "
 In the example above, Link is a component, to is an attribute being passed to the component and ```<h1>BLOG</h1>``` is the "children" of this component.
 
 Using this concept, we can create a layout component which takes children as the content of each page and it renders the child elements where specified in the layout.
+
+To make props easier to read and understand what we're passing down to components, we can "destructure" them -> this effectively allows us to assign variables to elements of props so we can drop the props. syntax. 
