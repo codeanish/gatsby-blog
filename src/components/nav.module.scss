@@ -1,0 +1,40 @@
+@import "../styles/variables.scss";
+
+.container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    background-color: $contrast-color;    
+    align-items: center;
+}
+
+.nav{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;     
+    a{
+        color: #FFFFFF;
+        display: block; 
+        padding: 1.2em; 
+        font-size: 1.2em;
+        letter-spacing: 0.4em;           
+    }
+    a:hover{
+        color: #FFFFFF;
+        background-color: black;
+    }
+}
+
+.logo{    
+    font-size: 1.2em;      
+    letter-spacing: 0.2em;
+    
+    a{
+        color: #FFFFFF;
+        display: block;
+        padding: 1.2em;        
+    }
+    a:hover{
+        color: #FFFFFF;
+    }
+}

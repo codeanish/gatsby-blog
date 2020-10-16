@@ -1,12 +1,15 @@
 import React from 'react'
 import Nav from './nav'
-import "./layout.scss"
+import "../styles/global.scss"
+import styles from './layout.module.scss'
 
 const Layout = ({children}) => {
     return(
-        <div>
-            <Nav/>
-            <div>
+        <div className={styles.container}>
+            <div className={styles.navbar}>
+                <Nav/>
+            </div>
+            <div className={styles.contentWrapper}>
                 {children}
             </div>
         </div>
