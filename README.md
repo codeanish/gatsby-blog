@@ -73,3 +73,21 @@ Create a variables.scss which we'll use to store variables that we wish to use t
 Define a layout style in layout.module.scss. Use flexbox and define the layout component and I'm going to provide a content wrapper around the page contents. We're using a technique here called CSS modules which allow us to locally scope class names. The cool thing here is say a ```<h1>``` tag is mormally 20px tall, we can define a style for just a given component by using css modules and specifying the height as 24px tall without affecting any other ```<h1>``` tags throughout.
 
 Defining a style module for the navbar. In this css module, we're defining a lot more styles, but this is purely a personal preference based on how you're designing your navbar and how you want it to look and behave. I've used flexbox with a flow of row wrap for the navbar so as the screen size shrinks, the row items start stacking on top of one another. This is the first part of making this responsive, but we'll revisit it a bit later how to make this properly responsive with hidden menu items and a hamburger menu when the screen size is small.
+
+## Lesson 5
+* Introduction to Images in Gatsby
+
+Gatsby has a fairly standardised way of dealing with images, it uses a few plugins to be able to automatically generate images of different sizes for you so that your site looks great on many different screen resolutions, whether someone is using a large 4k monitor or browsing your website on a small smart phone, Gatsby has you covered. The general way to access images is to do the following:
+
+1. Use GraphQL to access the image
+2. Display them with a Gatsby Image component
+
+Lets get started by installing the following 3 plugins:
+
+1. gatsby-source-filessytem ```npm install gatsby-source-filesystem```
+2. gatsby-plugin-sharp ```npm install gatsby-plugin-sharp```
+3. gatsby-transformer-sharp ```npm install gatsby-transformer-sharp```
+
+Add plugins to gatsby-config.js
+
+Pick up a photo for your homepage - use one of your own, or grab one here on https://unsplash.com/. Pop it in the /src/images folder.

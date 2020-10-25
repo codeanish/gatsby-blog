@@ -1,10 +1,26 @@
-import React from "react"
+import { useStaticQuery, graphql } from "gatsby";
+import React from "react";
 import Layout from "../components/layout";
+import Img from 'gatsby-image';
 
 const Home = () => {
+
+  const image = useStaticQuery(graphql`
+    query{
+      fileName: file(relativePath: {eq: "images/main-page.jpg"}){
+        childImageSharp{
+          fluid(maxWidth: 1600){
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <Layout>
       <h1>Home</h1>
+      <Img fluid={image.fileName.childImageSharp.fluid} alt="" />      
       <p>Sit quis sint labore ad quis do ullamco et cupidatat magna proident pariatur dolor. Laboris nisi proident sunt cillum sit deserunt ipsum consequat esse culpa enim Lorem eiusmod do. Incididunt labore cillum voluptate dolor est laborum sint nisi ut enim dolore excepteur. In culpa qui Lorem eu nostrud proident enim id id fugiat consequat magna. Ullamco ut cupidatat non excepteur nulla et. Enim veniam elit amet incididunt et elit proident eiusmod labore anim. Laboris laboris exercitation anim veniam mollit proident nostrud fugiat pariatur magna dolor.</p>
       <p>Nulla culpa culpa proident reprehenderit aliqua voluptate enim reprehenderit enim. Eiusmod consectetur dolore anim elit anim tempor amet qui esse et et. Occaecat anim ex officia est ullamco anim fugiat ullamco enim laborum aute aliqua excepteur labore. Labore eu fugiat proident sunt nostrud pariatur sunt sunt duis. Qui quis ea culpa commodo consectetur fugiat aliqua consectetur duis cupidatat et aliqua.</p>
       <p>Ad do excepteur dolor sunt quis. Nostrud sint ipsum aute aliqua est irure amet eu. Culpa aute Lorem labore anim non. Deserunt et minim fugiat sint nisi labore voluptate proident. Minim sunt in sint eiusmod quis.</p>
