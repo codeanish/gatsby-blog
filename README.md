@@ -100,3 +100,16 @@ Using a react hook called useStaticQuery that takes a graphql query and returns 
 There are two types of images in the gatsby-image library, fixed and fluid images. They are what they sound like, fixed images are of fixed pixel sizes and fluid images auto scale smaller and bigger depending on the screen size and resolution that it's being viewed at. For our purposes, we're going to use fluid images. Gatsby automatically generates images of different sizes and determines the behaviour of those images as they scale up and down. Gatsby automatically creates responsive images for 1x, 1.5x and 2x the pixel densities specified. The appropriate image is used based on media queries.
 
 Try experimenting with some of the properties of fluid (maxWidth & quality). What effect does quality and max width have?
+
+## Lesson 6
+
+* Creating blog posts in Contentful
+* Listing all the blog posts from contentful in blog posts page
+
+## Lesson 7
+
+* Generating individual blog post pages
+
+## Lesson 8
+
+* Deploying to Netlify
