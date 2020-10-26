@@ -82,12 +82,21 @@ Gatsby has a fairly standardised way of dealing with images, it uses a few plugi
 1. Use GraphQL to access the image
 2. Display them with a Gatsby Image component
 
-Lets get started by installing the following 3 plugins:
+Lets get started by installing the following 4 plugins:
 
-1. gatsby-source-filessytem ```npm install gatsby-source-filesystem```
-2. gatsby-plugin-sharp ```npm install gatsby-plugin-sharp```
-3. gatsby-transformer-sharp ```npm install gatsby-transformer-sharp```
+1. gatsby-image ```npm install gatsby-image```
+2. gatsby-source-filessytem ```npm install gatsby-source-filesystem```
+3. gatsby-plugin-sharp ```npm install gatsby-plugin-sharp```
+4. gatsby-transformer-sharp ```npm install gatsby-transformer-sharp```
 
-Add plugins to gatsby-config.js
+Add plugins 2-4 to gatsby-config.js
 
 Pick up a photo for your homepage - use one of your own, or grab one here on https://unsplash.com/. Pop it in the /src/images folder.
+
+Use graphql to find your image and pass it some graphql query fragments to select the apprpriate data that needs to be passed to gatsby-image in order to be able to generate the appropriate images for display.
+
+Using a react hook called useStaticQuery that takes a graphql query and returns your data. We're glossing over the magic that happens here, but effectively, when wrapping our graphql query in the useStaticQuery hook, gatsby parses and executes the queries within useStaticQuery at build time, so that the data is available for use in your application.
+
+There are two types of images in the gatsby-image library, fixed and fluid images. They are what they sound like, fixed images are of fixed pixel sizes and fluid images auto scale smaller and bigger depending on the screen size and resolution that it's being viewed at. For our purposes, we're going to use fluid images. Gatsby automatically generates images of different sizes and determines the behaviour of those images as they scale up and down. Gatsby automatically creates responsive images for 1x, 1.5x and 2x the pixel densities specified. The appropriate image is used based on media queries.
+
+Try experimenting with some of the properties of fluid (maxWidth & quality). What effect does quality and max width have?
