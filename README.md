@@ -103,8 +103,37 @@ Try experimenting with some of the properties of fluid (maxWidth & quality). Wha
 
 ## Lesson 6
 
-* Creating blog posts in Contentful
-* Listing all the blog posts from contentful in blog posts page
+### Creating blog posts in Contentful
+
+In Contentful do the following
+* Create an account
+* Create an empty space
+* Define a content model
+```
+    Title - Short Text
+    Slug - Short Text
+    Published Date - Date & Time
+    Body - Rich Text
+```
+Create a few blog posts
+
+### Configure our app to use contentful
+
+First install the gatsby contentful plugin.
+
+```npm install gatsby-source-contentful```
+
+Then add to the gatsby config (spotting a pattern here?). We're going to need to pass a couple of options here, your space id and access token which we'll get from Contentful.
+
+### Install env-cmd
+We're going to install env-cmd so that we can read environment variables from an .env file as opposed to writing them in the gatsby-config.js. You weren't really going to check in your Access token and space ID to Github were you?
+Modify our npm run commands in the package.json so that we push the env files into the develop and build commands using the following syntax:
+
+```env-cmd -f .env gatsby develop```
+
+### List out blog posts in the blog page
+
+Modify the blog.js page to use the graphql query needed to get all the blog posts. Then display out the blog posts returned by our GraphQL query. Check that the blog post titles are all displayed. Clicking them brings up a 404 page... this is because these pages don't exist yet. We could create each one of them manually, but that would be crazy. In the next lesson, we're going to create pages for each of the blog posts automatically.
 
 ## Lesson 7
 
