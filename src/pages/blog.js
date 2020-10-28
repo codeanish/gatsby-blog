@@ -25,7 +25,7 @@ const Blog = () => {
             <ol>
                 {blogPosts.allContentfulBlogPost.edges.map((edge) => {
                     return (
-                        <li><BlogPostCard title={edge.node.title} slug={edge.node.slug} publishedDate={edge.node.publishedDate}/></li>
+                        <li key={edge.node.slug}><BlogPostCard title={edge.node.title} slug={edge.node.slug} publishedDate={edge.node.publishedDate}/></li>
                     )
                 })}
             </ol>

@@ -137,8 +137,27 @@ Modify the blog.js page to use the graphql query needed to get all the blog post
 
 ## Lesson 7
 
-* Generating individual blog post pages
+### Generating individual blog post pages
+
+* Create a blog post template
+* Utilise the Gatsby Node API createPages to create a page for each blog post
+
+For the blog post template, we're going to want the Title, Published Date for now. Write the graphql query in the same fashion we've done a couple of times now and then return the template component displaying the data in a layout component.
+
+Create gatsby-node.js in the root of the project. In here we're using the gatsby node api, so we start with some syntax that is required in order to use the API, that is to create the exports.createPages async function which takes as arguments graphql and actions. The action we're interested in is createPage and we'll use graphql to query all our contentful blog posts.
+
+With each blog post, we're going to call the createPage action, passing in the component that we want to use as a template, in our case the one we just created, the path that this particular blog post is going to be at (we're using the slug here) and something called context which is basically some props we're passing to our template component. Naming is critical here as we'll have to tie it up to the template component. 
+
+In the blog post template component, note that we're expecting a pageContext prop which we're going to destructure and pull out blogPost so we get access to the fields of the blog post like title and published date.
+
+Having a click around, we can see we've generated blog posts at the appropriate URLs and also pulling the appropriate data into these blog posts.
+
+In the next lesson, we're going to be pulling the remainder of the blog post content in using the Contentful Rich Text Renderer.
 
 ## Lesson 8
+
+* Contentful Rich Text Renderer and options
+
+## Lesson 9
 
 * Deploying to Netlify
