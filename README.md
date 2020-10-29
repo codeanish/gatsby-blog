@@ -156,8 +156,22 @@ In the next lesson, we're going to be pulling the remainder of the blog post con
 
 ## Lesson 8
 
-* Contentful Rich Text Renderer and options
+### Contentful rich-text-react-renderer
+
+Looking at the blog post body that we're getting back from Contentful, it's clear that we're not getting some simple text or HTML that we can just inject into our template. We're instead getting a json payload which contains various nodes and some data about what those nodes are as well as the data contained within those nodes. Fortunately, contentful have provided us with a React renderer to help us render rich text out to a React App without worrying about parsing out all the Json and writing our own renderer. The repo is hosted here:
+
+https://github.com/contentful/rich-text/tree/master/packages/rich-text-react-renderer
+
+You can see to install it, you're just going to use ```npm install @contentful/rich-text-react-renderer```
+
+This isn't a gatsby specific plugin, so no need to worry about gatsby config. Now go into the blog post template and import the function documentToReactComponents from @contentful/rich-text-react-renderer.
+
+Once you've done that, just simply call that function within our return block and pass in the blog post json. Check it out in the UI and awesome, it's working. One thing is missing, we've not got any images showing up in our blog posts. It's in our Json, but it's not coming through to the rich-text-react-renderer
 
 ## Lesson 9
 
 * Deploying to Netlify
+
+## Lesson 10
+
+* Automate the build & deploy on contentful changes
