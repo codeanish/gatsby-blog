@@ -8,6 +8,9 @@ exports.createPages = async ({graphql, actions}) => {
                     slug
                     title
                     publishedDate (formatString: "MMMM do, YYYY")
+                    body{
+                        json
+                    }
                   }
                 }
             }
