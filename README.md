@@ -172,6 +172,12 @@ Once you've done that, just simply call that function within our return block an
 
 * Deploying to Netlify
 
+Create an account on Netlify
+Authorize Netlify to access your github account
+Select your repository containing your gatsby site
+Click advanced Build Settings, here you want to add some variables - these are the same ones we had in our .env file - we need to add our Contentful space id and our access token.
+You can then see your Gatsby website deployed up to netlify.
+
 ## Lesson 10
 
 * Automate the build & deploy on contentful changes
