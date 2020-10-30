@@ -178,6 +178,10 @@ Select your repository containing your gatsby site
 Click advanced Build Settings, here you want to add some variables - these are the same ones we had in our .env file - we need to add our Contentful space id and our access token.
 You can then see your Gatsby website deployed up to netlify.
 
+Make a change to the app, check it in and merge it into Main. We should be able to see the changes up in Netlify within a couple of minutes.
+
+In the next lesson, we'll investigate what we need to do to ensure that any changes in contentful trigger a new build and deployment as well.
+
 ## Lesson 10
 
 * Automate the build & deploy on contentful changes
