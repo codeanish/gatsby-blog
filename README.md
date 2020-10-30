@@ -185,3 +185,8 @@ In the next lesson, we'll investigate what we need to do to ensure that any chan
 ## Lesson 10
 
 * Automate the build & deploy on contentful changes
+
+In Contentful, Install the Netlify App
+Connect the Netlify site up with the content types you want to trigger an automated build/release of the site.
+Once you've edited some content, click build for contentful to trigger a build up in Netlify.
+This was awesome. Although, perhaps, lets bring this into lesson 9.
