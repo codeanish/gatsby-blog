@@ -21,7 +21,7 @@
     }
     a:hover{
         color: #FFFFFF;
-        background-color: black;
+        background-color: $contrast-color-dark;
     }
 }
 
@@ -32,7 +32,7 @@
     a{
         color: #FFFFFF;
         display: block;
-        padding: 1.2em;        
+        padding: 1.2em;
     }
     a:hover{
         color: #FFFFFF;

@@ -1,0 +1,14 @@
+@import "../styles/variables.scss";
+
+.card{
+    background-color: $contrast-color-light;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    color: #FFFFFF;
+    margin: 1em;
+}
+
+.card:hover{
+    background-color: $contrast-color;
+
+}

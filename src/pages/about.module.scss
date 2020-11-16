@@ -1,0 +1,13 @@
+@import "../styles/variables.scss";
+
+.container{        
+    max-width: 800px;
+}
+
+.header{
+    padding: 0.5em 0;
+    font-size: 4em;
+    font-weight: 500;
+    color: $contrast-color-dark;
+    text-align: center;
+}

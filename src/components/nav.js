@@ -6,7 +6,7 @@ const Nav = () => {
     return (
         <nav className={styles.container}>
             <div className={styles.logo}>
-                <Link to="/">{'>'}codeanish</Link>
+                <Link to="/">ANISH PATEL</Link>
             </div>
             <ul className={styles.nav}>
                 <li><Link to="/">HOME</Link></li>
