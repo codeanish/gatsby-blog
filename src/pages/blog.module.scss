@@ -1,0 +1,28 @@
+.blog-posts{    
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    p{
+        color: #FFFFFF;
+    }
+    li{
+        padding: 5px 0;
+        width: 50%;        
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .blog-posts{
+        li{
+            width: 75%;
+        }
+    }
+}
+
+@media screen and (max-width: 600px){
+    .blog-posts{
+        li{
+            width: 100%;
+        }
+    }
+}
