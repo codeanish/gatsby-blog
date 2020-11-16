@@ -8,16 +8,16 @@ const Blog = () => {
 
     const blogPosts = useStaticQuery(graphql`
         query{
-            allContentfulBlogPost {
-                edges {
-                  node {
-                    title
-                    publishedDate(formatString: "MMMM do, YYYY")
-                    slug
-                  }
+            allContentfulBlogPost(sort: {order: DESC, fields: publishedDate}) {
+              edges {
+                node {
+                  title
+                  publishedDate(formatString: "MMMM do, YYYY")
+                  slug
                 }
               }
-        }
+            }
+          }
     `)
 
     return (

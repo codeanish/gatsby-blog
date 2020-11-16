@@ -18,9 +18,11 @@ const BlogPost = ({pageContext}) => {
 
     return(
         <Layout>
-            <h1>{blogPost.title}</h1>
-            <h2>{blogPost.publishedDate}</h2>
-            {documentToReactComponents(blogPost.body.json, options)}
+            <div style={{maxWidth:'800px'}}>
+                <h1>{blogPost.title}</h1>
+                <h2>{blogPost.publishedDate}</h2>
+                {documentToReactComponents(blogPost.body.json, options)}
+            </div>
         </Layout>
     )
 
